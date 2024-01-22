@@ -1,3 +1,4 @@
+User-agent: *
 User-agent: GPTBot
 Disallow: /
 User-agent: EtaoSpider
@@ -6,7 +7,6 @@ User-agent: CCBot
 Disallow: /
 User-agent: Google-Extended
 Disallow: /
-User-agent: *
 Allow: /partners/ipad/live-video.json
 Sitemap: https://www.darknets.org/sitemaps/sitemap-section.xml
 Disallow: /*.jsx$
