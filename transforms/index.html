@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="/xmlrpc.php">
-	<title>Installation &#038; Setup &#8211; for the Dark Web</title>
+	<title>Transforms &#038; and &#8211; Prompts</title>
 <meta name="robots" content="max-image-preview:large">
 <link rel="alternate" type="application/rss+xml" title="Darknets.org &raquo; Feed" href="/feed/">
 <link rel="alternate" type="application/rss+xml" title="Darknets.org &raquo; Comments Feed" href="/comments/feed/">
@@ -115,73 +115,31 @@ img.emoji {
 				<div class="elementor-element elementor-element-1cb02fe7 elementor-widget elementor-widget-text-editor" data-id="1cb02fe7" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
 				<style> .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p><!-- wp:paragraph --></p>
-<p>INSTALLATION <img decoding="async" src="https://cdn4.iconfinder.com/data/icons/Ethereal_Icons_2/PNGs/Hardware/Floppy.png" alt="Floppy" width="27" height="27" data-srcset="https://cdn4.iconfinder.com/data/icons/Ethereal_Icons_2/PNGs/Hardware/Floppy.png 1x, https://cdn4.iconfinder.com/data/icons/Ethereal_Icons_2/PNGs/Hardware/Floppy.png 2x"></p>
+
+					
+<p>🐚 Transforms: </p>
 <p></p><p></p><ol>
-<li>Install the very basic Debian, <a href="https://www.debian.org/distrib/" target="_blank" rel="noopener">Debian download</a>, (Small or <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.2.0-amd64-netinst.iso" target="_blank" rel="noopener">Tiny</a>) Remember Less is More, you want a minimal install to reduce exposure.</li>
-<li>
-<b>Warning:</b> if you are running Kali Linux <a href="https://www.kali.org/get-kali/" target="_blank" rel="noreferrer noopener">Kali Download</a><img decoding="async" src="https://cdn1.iconfinder.com/data/icons/weather-and-disaster-flat/340/snow_winter_snowflake_season_christmas_cold_flake_snowfall_frost_ice-512.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> or <a href="https://www.parrotsec.org/download/">ParrotOS Download</a> <img decoding="async" src="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> there are a lot of unnecessary tools and services running on these distros that may not be ideal for a Tor Investigative System. If you do use these systems, make sure you shut them down after use.  📴</li>
+<b>Warning:</b> 🔐if you are running Kali Linux <a href="https://www.kali.org/get-kali/" target="_blank" rel="noreferrer noopener">Kali Download</a><img decoding="async" src="https://cdn1.iconfinder.com/data/icons/weather-and-disaster-flat/340/snow_winter_snowflake_season_christmas_cold_flake_snowfall_frost_ice-512.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> or <a href="https://www.parrotsec.org/download/">ParrotOS Download</a> <img decoding="async" src="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> there are a lot of unnecessary tools and services running on these distros that may not be ideal for a Tor Investigative System. If you do use these systems, make sure you shut them down after use.  📴</li>
 <li>Install ClamAV | <i>sudo apt install clamav</i> | <i>sudo clamscan 🐚<br></i>
 </li>
 <li>Install UFW Uncomplicated firewall 🧱| <i>apt install ufw </i>| <i>systemctl status ufw</i> 
 </li>
-<li>Next we will install requirements for our VPN Connectivity 🔦 with OpenVPN and it dependencies</li>
-</ol>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><i>sudo apt install -y openvpn network-manager-openvpn network-manager-openvpn-gnome<br></i></li>
-</ul>
-</li>
-</ul>
-<p>   6. Once you finish your base Operating system installation &#8211; You will use a specialized script we created to help download other required tools:</p>
-<ol>
-<li style="list-style-type: none;">
-<ol>
-<li>Next run our setup script: <strong><em>curl -sSL /darksetup.sh/darksetup.sh | sudo bash</em></strong>
-</li>
-<li>Make executable chmod +x darksetup.sh</li>
-<li>Run executable /darksetup.sh   <i>(wait for tools/install to finish)</i>
-</li>
-</ol>
-</li>
-<li>Next download our container management script called &#8220;<strong><em>darkrun.sh</em></strong>&#8220;</li>
-<li>Container Manager: <a href="https://Darknets.org/darkrun.sh">darkrun.sh</a> right click and save to your system</li>
-<li>You may need to make it executable on your distro -&gt; chmod +x darkrun.sh</li>
-	<br>
-	
-<li>Next, Lets Install docker onto your system, after you have Docker installed &#8220;service docker start&#8221; &amp; &#8220;service docker status&#8221; [if not click here <a href="https://www.kali.org/docs/containers/installing-docker-on-kali/">&#8220;docker install&#8221;</a> on Kali ]</li>
-</ol>
-<p></p>
-<p></p>
-<figure><img decoding="async" class="aligncenter" src="/wp-content/uploads/2022/09/image-1-1024x94.png" alt=""></figure>
-<p></p>
-<p></p>
-<p><img decoding="async" loading="lazy" class="aligncenter" src="https://cdn4.iconfinder.com/data/icons/STROKE/graphics/png/64/color.png" alt="Color" width="59" height="59" data-srcset="https://cdn4.iconfinder.com/data/icons/STROKE/graphics/png/256/color.png 1x, https://cdn4.iconfinder.com/data/icons/STROKE/graphics/png/400/color.png 2x"></p>
-<p>To use the <strong>container manager</strong> &#8220;darkstart.sh&#8221; 🔐script to start the various containers use the following syntax</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:list {"ordered":true} --></p>
-<ol>
-<li>switch to the darkweb directory [root\darkweb <i>or</i> user\darkweb]</li>
-<li>sudo <em>./darkstart.sh</em> -h provides a help menu</li>
-<li>sudo <em>./darkstart.sh</em> start alpine &#8216;starts the <a href="https://hub.docker.com/_/alpine" target="_blank" rel="noreferrer noopener">alpine </a>container&#8217; server we will use this for hosting our Dark Web Server on the Tor Network.</li>
-<li>There are multiple containers that are downloaded you can see everything that is available docker -ls</li>
-
-<p><img decoding="async" loading="lazy" class="aligncenter" src="https://cdn4.iconfinder.com/data/icons/Office_dock_icons_by_arrioch/color_128/Color MS Outlook.png" alt="Color, ms, outlook, mail" width="39" height="39" data-srcset="https://cdn4.iconfinder.com/data/icons/Office_dock_icons_by_arrioch/color/Color%20MS%20Outlook.png 1x, https://cdn4.iconfinder.com/data/icons/Office_dock_icons_by_arrioch/color/Color%20MS%20Outlook.png 2x"></p>
-
-
 </pre>
 <p></p>
-</div>		</div>
-		</div>
-		</div>
-		</div>
-		</div>
-		</section>
-		</div>
-		</div>
-		</div>
-		</section>
-		</div><div class="post-tags"></div></div></main>
+<br>
+<p>🔐 Prompts: </p>
+<p></p><p></p><ol>
+<b>Warning:</b> 🔐if you are running Kali Linux <a href="https://www.kali.org/get-kali/" target="_blank" rel="noreferrer noopener">Kali Download</a><img decoding="async" src="https://cdn1.iconfinder.com/data/icons/weather-and-disaster-flat/340/snow_winter_snowflake_season_christmas_cold_flake_snowfall_frost_ice-512.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> or <a href="https://www.parrotsec.org/download/">ParrotOS Download</a> <img decoding="async" src="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> there are a lot of unnecessary tools and services running on these distros that may not be ideal for a Tor Investigative System. If you do use these systems, make sure you shut them down after use.  📴</li>
+<li>Install ClamAV | <i>sudo apt install clamav</i> | <i>sudo clamscan 🐚<br></i>
+</li>
+<li>Install UFW Uncomplicated firewall 🧱| <i>apt install ufw </i>| <i>systemctl status ufw</i> 
+</li>
+</pre>
+<p></p>
+<br>
+
+				</div></div></div></div></div></div></section></div></div></div></section>
+				</div><div class="post-tags"></div></div></main>
 
 	
 				<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
