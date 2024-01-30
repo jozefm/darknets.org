@@ -133,9 +133,85 @@ A primary goal of threat investigations is to understand the context behind an a
 <p>Likewise, since not all data is relevant data, it is important for enterprise cybersecurity analysts to understand the true value of selectors to obtain only those datasets that have the highest likelihood of leading to successful attribution.</p>
 <p>After all, as the amount of available data increases, the volume of the data waters down the value of the data. With that in mind, let’s dig deeper into the selector ecosystem.</p></div>
 </div>
-	
 <br>
+<p><strong>Properties of a Selector</strong></p>
+<p>As noted, a selector is the technical attribute of an entity. If the entity is a person, the relevant selectors would be that person’s name, date of birth, address, phone number, email address, social media account, etc. If the entity is a website, its selectors would be the domain name, the IP address(es), registrant and registrar name and address, the account creation ID information, etc.</p>
+<p>Just like a name “John Smith” is not a unique identifier for a specific person, whereas a social security number paired with “John Smith” is more useful, so too are some technical selectors non-unique (e.g. GoDaddy as a domain registrar).</p>
+<p>It is critical to understand the properties of selectors in order to appropriately use them for attribution purposes.</p>
+<p>A selector must be:</p>
+<ul>
+<li>A string of characters</li>
+<li>Somewhat unique in nature (“password” is not unique but “JohnSmithpassword123!” has unique characteristics)</li>
+<li>Understandable</li>
+<li>Related to a service or system</li>
+</ul>
+<p>A selector can be:</p>
+<ul>
+<li>Linked to other ‘associated’ selectors</li>
+<li>Encoded or encrypted</li>
+<li>Randomly generated</li>
+</ul></div>
+<br>
+<p><strong>Assigning Value to Selectors</strong></p>
+<p>Technical collection comes in a variety of forms and artifacts. Narrowing the funnel becomes vital when tracking entities across multiple data sets from a variety of sources.</p>
+<p>Analysts should be looking for “valuable selectors.” For example, when analyzing a domain to determine whether an individual or group is tied to multiple domains, an analyst should focus only on unique selectors.</p>
+<p>In general, the more entities a selector is associated with, the less valuable it will be. For example, a selector for an internet service provider or a domain provider will be tied to far too many entities to materially link two entities to each other.</p></div>
+<br>
+<p><strong>Assigning Value to Selectors</strong></p>
+<p>Technical collection comes in a variety of forms and artifacts. Narrowing the funnel becomes vital when tracking entities across multiple data sets from a variety of sources.</p>
+<p>Analysts should be looking for “valuable selectors.” For example, when analyzing a domain to determine whether an individual or group is tied to multiple domains, an analyst should focus only on unique selectors.</p>
+<p>In general, the more entities a selector is associated with, the less valuable it will be. For example, a selector for an internet service provider or a domain provider will be tied to far too many entities to materially link two entities to each other.</p></div>
+<p><strong>Grading the Value of a Selector</strong></p>
+<p>During an investigation, it is helpful to look at the value of a selector in the following categories:</p>
+<p style="padding-left: 40px;"><strong>Scope</strong>: Scope explains which systems can access the identifier.</p>
+<p style="padding-left: 40px;"><strong>Uniqueness</strong>: Uniqueness establishes the likelihood that identical identifiers exist within the associated scope.</p>
+<p style="padding-left: 40px;"><strong>Reset-ability and Persistence</strong>: Reset-ability and persistence define the lifespan of the identifier and explain how it can be reset.</p>
+<p style="padding-left: 40px;"><strong>Integrity</strong>: An identifier that is difficult to spoof or replay can be used to prove that the associated device or account has certain properties.</p>
+<p style="padding-left: 40px;"><strong>Non-Repudiation</strong>: Non-Repudiation means the service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.</p>
+<p style="padding-left: 40px;"><strong>Provenance</strong>: Provenance provides the ability to trace information to the source of the data.</p>
+<p><strong>Selector Scope</strong></p>
+<p>Selector Scope explains which systems can access the identifier. The scope provides trust in a selector in the sense that if an analyst does not have access to the data in that ecosystem, it’s not relevant.</p>
+<p style="padding-left: 40px;"><strong>Single Realm</strong>: The selector is internal to the realm of data and not accessible to other realms. The selector only works within that specific space. An example would be a Facebook ID. Outside of the Facebook realm, that selector is meaningless.</p>
+<p style="padding-left: 40px;"><strong>Group of Realms</strong>: The selector is accessible to a defined group of related realms. An example is an advertising ID that works throughout the entire internet.</p>
+<p style="padding-left: 40px;"><strong>Device</strong>: The selector is accessible to all realms within a device. An IMSI or IMEI are examples. IMSI is the unique number identifying a GSM subscriber. An IMEI is a number, usually unique, to identify 3GPP and iDEN mobile phones, as well as some satellite phones.</p>
+<p style="padding-left: 40px;"><strong>Group of Devices</strong>: The selector is accessible to a defined group of related devices. An example would be devices that sit behind a router using a single IP address.</p>
+<p>If a selector can only be accessed by a single Realm, it can’t be used to track a device across transactions in different Realms, thus, access to that realm’s data would be required to make use of the selector in terms of attribution.</p>
+<p><strong>Selector Uniqueness</strong></p>
+<p>Selector Uniqueness establishes the likelihood that identical identifiers exist within the associated scope.</p>
+<p style="padding-left: 40px;"><strong>Globally/Universally</strong>: When generated according to the standard methods, universally unique identifiers (UUIDs) are, for practical purposes, unique.</p>
+<p style="padding-left: 40px;"><strong>Organizationally</strong>: Identifiers created by vendors, manufacturers, or organizations for internal differentiation of entities. An example is the organizational unique identifier (OUI) of a MAC Address or a device serial number assigned to a mobile handset.</p>
+<p style="padding-left: 40px;"><strong>Domain/Group</strong>: Selectors generated to be unique within a body of related data elements commonly accepted to not contain collisions. An example would be a URL string path after the domain or a network MAC Address.</p>
+<p style="padding-left: 40px;"><strong>Individually</strong>: Entitles created to be unique within a single ecosystem. An example would be a conceptualized body defined by people such as an employee ID number for a company.</p>
+<p style="padding-left: 40px;"><strong>Human</strong> <strong>Uniqueness</strong>: Entities created by human beings that might not be unique to a scope but would be unique based on complexity and rarity. A password created by a human is an example.</p>
+<p>It is important to remember that the uniqueness of a selector is often bound by:</p>
+<ol>
+<li>requirements defined by the system to function</li>
+<li>ethical responsibility of the creator</li>
+</ol>
+<p><strong>Selector Reset-ability and Persistence</strong></p>
+<p>Selector Reset-ability and Persistence define the lifespan of the identifier and explain how it can be reset.</p>
+<p style="padding-left: 40px;"><strong>Session-Only</strong>: A new selector is used every time the user restarts the software. A cookie or session token created by the system is an example.</p>
+<p style="padding-left: 40px;"><strong>Install-Reset</strong>: A new ID is used every time the software is installed or uninstalled and is often generated every time someone reinstalls an operating system or software package.</p>
+<p style="padding-left: 40px;"><strong>Factory-Reset</strong>: A new selector is used every time the hardware is factory-reset.</p>
+<p style="padding-left: 40px;"><strong>Factory-Persistent</strong>: The selector survives factory hardware. An iPhone serial number is an example as it is embedded in the hardware.</p>
+<p style="padding-left: 40px;"><strong>User-Initiated</strong>: The user of the system (hardware or software) manually initiates a reset of the selector. A Google advertiser identifier is an example.</p>
+<p style="padding-left: 40px;"><strong>System-Initiated</strong>: The system (hardware or software) automatically initiates a function which resets the selector (intended or unintended consequence). IP address is a good example of this as service providers change this routinely for dynamic IPs.</p>
+<p><strong>Selector Integrity and Non-Repudiation</strong></p>
+<p>Selector Integrity and Non-Repudiation ask simply: can the selector be spoofed? A service provides proof of the integrity and origin of the data.</p>
+<p style="padding-left: 40px;"><strong>Integrity</strong>: An identifier that is difficult to spoof or the replay can be used to prove that the associated device or account has certain properties. For example, a MAC address can be spoofed but can be validated by checking the hardware.</p>
+<p style="padding-left: 40px;"><strong>Non-Repudiation:</strong> The service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.</p>
+<p>Think of this by trying to answer, “Is this a virtual device used by a third-party?”</p>
+<p>It’s difficult to spoof identifiers that provide non-repudiation. If the device signs a message with a secret key, it is difficult to claim someone else’s device sent the message.</p>
+<p><strong>Selector Provenance</strong></p>
+<p>Selector Provenance provides the ability to trace information to the host and associate the selectors amongst other data. Provenance can be affected by integrity because some selectors can be user- or software-generated.</p>
+<p style="padding-left: 40px;"><strong>User-Generated</strong>: Selector generated by the user of the device or system such as a name, birth place, and education history. These can be fabricated.</p>
+<p style="padding-left: 40px;"><strong>Software-Generated</strong>: Selectors created by an application system or service (agnostic of user input). Timestamps are examples.</p>
+<p style="padding-left: 40px;"><strong>Hardware-Generated</strong>: Selector defined by the host system or service (agnostic of user input) such as an IMSI, IMEI, and Serial Numbers.</p>
+<p style="padding-left: 40px;"><strong>Hybrid</strong>: Selector defined by the software or hardware system reliant on user input.</p></div>
+			</div>
+			</div>
 
+					
 <p>🔐 Transforms: </p>
 <p></p><ol>
 <b>Transforms:</b> if you are running Kali Linux <a href="https://www.kali.org/get-kali/" target="_blank" rel="noreferrer noopener">Kali Download</a><img decoding="async" src="https://cdn1.iconfinder.com/data/icons/weather-and-disaster-flat/340/snow_winter_snowflake_season_christmas_cold_flake_snowfall_frost_ice-512.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> or <a href="https://www.parrotsec.org/download/">ParrotOS Download</a> <img decoding="async" src="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png" width="28" height="28" data-srcset="https://cdn4.iconfinder.com/data/icons/zoo-line-welcome-to-zootopia/512/parrot-64.png 1x "> there are a lot of unnecessary tools and services running on these distros that may not be ideal for a Tor Investigative System. If you do use these systems, make sure you shut them down after use.  📴</li>
