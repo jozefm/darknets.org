@@ -219,26 +219,26 @@ In general, the more entities a selector is associated with, the less valuable i
 <li>Non-Repudiation:</li> Non-Repudiation means the service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.
 <li>Provenance:</li> Provenance provides the ability to trace information to the source of the data.
 
-<h4>Selector Scope</h4>
+<h4>🔦 Selector Scope</h4>
 <p>Selector Scope explains which systems can access the identifier. The scope provides trust in a selector in the sense that if an analyst does not have access to the data in that ecosystem, it’s not relevant.
 Single Realm: The selector is internal to the realm of data and not accessible to other realms. The selector only works within that specific space. An example would be a Facebook ID. Outside of the Facebook realm, that selector is meaningless.
 Group of Realms: The selector is accessible to a defined group of related realms. An example is an advertising ID that works throughout the entire internet.
 Device: The selector is accessible to all realms within a device. An IMSI or IMEI are examples. IMSI is the unique number identifying a GSM subscriber. An IMEI is a number, usually unique, to identify 3GPP and iDEN mobile phones, as well as some satellite phones.
 Group of Devices: The selector is accessible to a defined group of related devices. An example would be devices that sit behind a router using a single IP address. If a selector can only be accessed by a single Realm, it can’t be used to track a device across transactions in different Realms, thus, access to that realm’s data would be required to make use of the selector in terms of attribution.
 
-<h4>Selector Uniqueness</h4>
-<p></p>Selector Uniqueness establishes the likelihood that identical identifiers exist within the associated scope.
-Globally/Universally: When generated according to the standard methods, universally unique identifiers (UUIDs) are, for practical purposes, unique.
-Organizationally: Identifiers created by vendors, manufacturers, or organizations for internal differentiation of entities. An example is the organizational unique identifier (OUI) of a MAC Address or a device serial number assigned to a mobile handset.
-Domain/Group: Selectors generated to be unique within a body of related data elements commonly accepted to not contain collisions. An example would be a URL string path after the domain or a network MAC Address.
-Individually: Entitles created to be unique within a single ecosystem. An example would be a conceptualized body defined by people such as an employee ID number for a company.
-Human Uniqueness: Entities created by human beings that might not be unique to a scope but would be unique based on complexity and rarity. A password created by a human is an example.
+<h4>🔦 Selector Uniqueness</h4>
+<p>Selector Uniqueness establishes the likelihood that identical identifiers exist within the associated scope.</p>
+<li>Globally/Universally:</li> When generated according to the standard methods, universally unique identifiers (UUIDs) are, for practical purposes, unique.
+<li>Organizationally:</li> Identifiers created by vendors, manufacturers, or organizations for internal differentiation of entities. An example is the organizational unique identifier (OUI) of a MAC Address or a device serial number assigned to a mobile handset.
+	<li>Domain/Group:</li> Selectors generated to be unique within a body of related data elements commonly accepted to not contain collisions. An example would be a URL string path after the domain or a network MAC Address.
+	<li>Individually:</li> Entitles created to be unique within a single ecosystem. An example would be a conceptualized body defined by people such as an employee ID number for a company.
+<li>Human Uniqueness:</li> Entities created by human beings that might not be unique to a scope but would be unique based on complexity and rarity. A password created by a human is an example.
 It is important to remember that the uniqueness of a selector is often bound by:
 
     <li>Requirements defined by the system to function</li>
     <li>Ethical responsibility of the creator</li>
-
-<h4>Selector Reset-ability and Persistence</h4>
+<br>
+<h4>🔦 Selector Reset-ability and Persistence</h4>
 <p></p>Selector Reset-ability and Persistence define the lifespan of the identifier and explain how it can be reset.
 Session-Only: A new selector is used every time the user restarts the software. A cookie or session token created by the system is an example.
 Install-Reset: A new ID is used every time the software is installed or uninstalled and is often generated every time someone reinstalls an operating system or software package.
@@ -248,14 +248,14 @@ User-Initiated: The user of the system (hardware or software) manually initiates
 System-Initiated: The system (hardware or software) automatically initiates a function which resets the selector (intended or unintended consequence). IP address is a good example of this as service providers change this routinely for dynamic IPs.
 <br>
 	
-<h4>Selector Integrity and Non-Repudiation</h4>
+<h4>🔦 Selector Integrity and Non-Repudiation</h4>
 <p>Selector Integrity and Non-Repudiation ask simply:</p> <p>can the selector be spoofed? A service provides proof of the integrity and origin of the data.</p>
 <p>Integrity: An identifier that is difficult to spoof or the replay can be used to prove that the associated device or account has certain properties. For example, a MAC address can be spoofed but can be validated by checking the hardware.</p>
 <p>Non-Repudiation: The service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.</p>
 <p>Think of this by trying to answer, “Is this a virtual device used by a third-party?” It’s difficult to spoof identifiers that provide non-repudiation. If the device signs a message with a secret key, it is difficult to claim someone else’s device sent the message.</p>
 <br>
 	
-<h4>Selector Provenance</h4>
+<h4>🔦 Selector Provenance</h4>
 <p>Selector Provenance provides the ability to trace information to the host and associate the selectors amongst other data. Provenance can be affected by integrity because some selectors can be user- or software-generated.</p>
 <p>User-Generated: Selector generated by the user of the device or system such as a name, birth place, and education history. These can be fabricated.</p>
 <p>Software-Generated: Selectors created by an application system or service (agnostic of user input). Timestamps are examples.</p>
