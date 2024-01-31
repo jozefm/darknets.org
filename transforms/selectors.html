@@ -175,8 +175,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 		<p><b>The primary goal of threat investigations is to understand the context behind an attack or attempted attack.</b></p>
 		<p></p><br>
 
-<p>Defenders should understand what normally is happening in thier environment, to better defend agsinst anonymolies in the future. Often, investigators will look for attribution, 
-    or assessment of a particular individual or group behind an attack, to provide this context.</p>
+<p>Defenders should understand what normally for their network and systems in thier environment, this will allow them to determin anonymolies in the future. Often, investigators will look for attribution of a specific attacker, 
+    or assessment of a particular individual or group behind an attack, this is all designed to provide context.</p>
 
 <h3>🔦 The Importance of Selectors</h3>
 <p>Underneath the fake phone number, email address, and social media personas are technical details that, when pieced together, prove critical to attribution.  Just like a puzzle has value only when all the individual pieces are 
@@ -204,20 +204,20 @@ It is critical to understand the properties of selectors in order to appropriate
     <li>Linked to other ‘associated’ selectors</li>
     <li>Encoded or encrypted</li>
     <li>Randomly generated</li>
-
+<br>
 <h4>🔦 Assigning Value to Selectors</h4>
 <p>Technical collection comes in a variety of forms and artifacts. Narrowing the funnel becomes vital when tracking entities across multiple data sets from a variety of sources.
 Analysts should be looking for “valuable selectors.” For example, when analyzing a domain to determine whether an individual or group is tied to multiple domains, an analyst should focus only on unique selectors.
 In general, the more entities a selector is associated with, the less valuable it will be. For example, a selector for an internet service provider or a domain provider will be tied to far too many entities to materially link two entities to each other.
 
-<h4>🔦 Grading the Value of a Selector</h4>h4>
+<h4>🔦 Grading the Value of a Selector</h4>
 <p>During an investigation, it is helpful to look at the value of a selector in the following categories:
-Scope: Scope explains which systems can access the identifier.
-Uniqueness: Uniqueness establishes the likelihood that identical identifiers exist within the associated scope.
-Reset-ability and Persistence: Reset-ability and persistence define the lifespan of the identifier and explain how it can be reset.
-Integrity: An identifier that is difficult to spoof or replay can be used to prove that the associated device or account has certain properties.
-Non-Repudiation: Non-Repudiation means the service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.
-Provenance: Provenance provides the ability to trace information to the source of the data.
+<li>Scope:</li> Scope explains which systems can access the identifier.
+<li>Uniqueness:</li> Uniqueness establishes the likelihood that identical identifiers exist within the associated scope.
+<li>Reset-ability:</li> and Persistence: Reset-ability and persistence define the lifespan of the identifier and explain how it can be reset.
+<li>Integrity:</li> An identifier that is difficult to spoof or replay can be used to prove that the associated device or account has certain properties.
+<li>Non-Repudiation:</li> Non-Repudiation means the service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.
+<li>Provenance:</li> Provenance provides the ability to trace information to the source of the data.
 
 <h4>Selector Scope</h4>
 <p>Selector Scope explains which systems can access the identifier. The scope provides trust in a selector in the sense that if an analyst does not have access to the data in that ecosystem, it’s not relevant.
@@ -246,13 +246,15 @@ Factory-Reset: A new selector is used every time the hardware is factory-reset.
 Factory-Persistent: The selector survives factory hardware. An iPhone serial number is an example as it is embedded in the hardware.
 User-Initiated: The user of the system (hardware or software) manually initiates a reset of the selector. A Google advertiser identifier is an example.
 System-Initiated: The system (hardware or software) automatically initiates a function which resets the selector (intended or unintended consequence). IP address is a good example of this as service providers change this routinely for dynamic IPs.
-
+<br>
+	
 <h4>Selector Integrity and Non-Repudiation</h4>
 <p>Selector Integrity and Non-Repudiation ask simply:</p> <p>can the selector be spoofed? A service provides proof of the integrity and origin of the data.</p>
 <p>Integrity: An identifier that is difficult to spoof or the replay can be used to prove that the associated device or account has certain properties. For example, a MAC address can be spoofed but can be validated by checking the hardware.</p>
 <p>Non-Repudiation: The service provides proof of the integrity and origin of data creating an authentication that can be said to be genuine with high confidence.</p>
 <p>Think of this by trying to answer, “Is this a virtual device used by a third-party?” It’s difficult to spoof identifiers that provide non-repudiation. If the device signs a message with a secret key, it is difficult to claim someone else’s device sent the message.</p>
-
+<br>
+	
 <h4>Selector Provenance</h4>
 <p>Selector Provenance provides the ability to trace information to the host and associate the selectors amongst other data. Provenance can be affected by integrity because some selectors can be user- or software-generated.</p>
 <p>User-Generated: Selector generated by the user of the device or system such as a name, birth place, and education history. These can be fabricated.</p>
@@ -260,6 +262,36 @@ System-Initiated: The system (hardware or software) automatically initiates a fu
 <p>Hardware-Generated: Selector defined by the host system or service (agnostic of user input) such as an IMSI, IMEI, and Serial Numbers.</p>
 <p>Hybrid: Selector defined by the software or hardware system reliant on user input.</p>
 
+<br>
+<h4>Mistakes:</h4>
+<p>Sensitive data leaks happen when an application exposes sensitive data, such as credentials, secret keys, personal information, or configuration information to people that shouldn’t have access to that information
+
+<hr width="100%" size="1" color="blue" noshade>
+
+<br>
+<p><b>Sample Selectors:</p></b>
+    <li>A string of characters, words</li>
+	<li>Breach Data</li>
+	<li>Leak Data</li>
+	<li>Database</li>
+	<li>Redline, Racoon logs</li>
+	<li>RDP, XRDP</li>
+	<li>Key</li>
+	<li>Secret</li>
+	<li>Password</li>
+	<li>Breached</li>
+	<li>Datadump</li>
+	<li>Dumps</li>
+	<li>ComboList</li>
+	<li>ComboData</li>
+	<li>Hashed</li>
+	<li>Fresh</li>
+	<li>MedFullz</li>
+	<li>Username</li>
+	<li>Email Address</li>
+
+<br>
+<br>
 
          <p>Credit: </p><div class="post-tags"></div></div></main>
 		<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
